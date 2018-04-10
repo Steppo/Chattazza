@@ -1,0 +1,47 @@
+body{
+	background: #363030;
+}
+.login-container{
+	position: absolute;
+	margin: auto;	
+	width: 400px;
+	top: 30%;
+	left: 0;
+	right: 0;	
+	padding: 50px;
+	background: #262020;
+	color: white;
+	box-shadow: 2px 2px 2px #262020;
+}
+.login-container h2{
+	font-size: 30px;
+	margin: 0;
+}
+.login-container img.logo{
+	width:50px;
+}
+
+.form-container{
+	margin-top: 30px;
+}
+
+.form-container{
+	
+}
+.form-container input[type='text'], input[type='password']{
+	height: 40px;
+	border: 1px solid silver;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.login-button{
+	width: 100%;
+	padding: 10px 20px;
+	background: #d33434;
+	border: none;
+	color: white;
+}
+
+.login-button:hover{
+	background: #f90e0e;
+}
