@@ -1,0 +1,21 @@
+<HTML>
+    <HEAD>
+        <title>chat</title>
+        <link rel="stylesheet" type="text/css" href="/chattazza/src/styles/mystyle.css">
+    </HEAD>
+    <BODY>
+        <div class="login-container">
+            <h2>Sign up</h2> 
+        <!--	<img src="/chattazza/src/img/background/Logo.png">  -->
+            <div class='form-container'>
+                <form action="/chattazza/chat/php/signup.php" method='post'>
+                    <input type='text' placeholder='Username' name='username'/>
+                    <input type='password' placeholder='Password' name='password'/>
+                    <input type='password' placeholder='Confirm password' name='confirm_password'/>
+                    <input type="email" placeholder="Email" name="email" />
+                    <input class='homepage-button' type='submit' value='Sign up' name='sign_up'/>
+                </form>
+            </div>
+        </div>
+    </BODY>
+</HTML>

@@ -1,20 +1,23 @@
 body{
-	background-image: url("/chattazza/src/img/background/background1.jpg");
+/*	background-image: url("/chattazza/src/img/background/background1.jpg"); */
+	background-color: rgb(238, 238, 238);
 	font-family: 'Hind Vadodara', sans-serif;
 }
+
 .login-container{
 	position: absolute;
-	margin: auto;	
+	align-content: center;
+	margin: 0 auto;	
 	width: 400px;
-	top: 25%;
+	top: 20%;
 	left: 0;
 	right: 0;	
 	padding: 50px;
 	background: #262020;
 	color: white;
 	box-shadow: 2px 2px 2px #3a2f2f;
-	
 }
+
 .login-container h2{
 	font-size: 30px;
 	margin: 0;
@@ -26,7 +29,7 @@ body{
 .form-container{
 	margin-top: 30px;
 }
-.form-container input[type='text'], input[type='password']{
+.form-container input[type='text'], input[type='password'], input[type='email']{
 	height: 40px;
 	border: 1px solid silver;
 	width: 100%;
@@ -36,15 +39,15 @@ body{
 .homepage-button{
 	width: 45%;
 	padding: 10px 20px;
-	background: #c20b17;
+	background: #337ab7;
 	border: none;
 	color: white;	
 }
 .homepage-button:hover{
-	background: #db0f0f;
+	background: #3a86c9;
 }
 .homepage-button:active{
-	background: #ff1100;
+	background: #3891df;
 }
 .form-container .right{
 	margin-left: 4.4%

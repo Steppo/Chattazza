@@ -6,8 +6,11 @@
     }  
     else{
         if(isset($_POST['login']))
+        {
             echo "Login";
+            
+        }
         if(isset($_POST['sign_up']))
-            echo "Signup";
+            header('Location: /chattazza/chat/html/signup.html');
     }
 ?>
