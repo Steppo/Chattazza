@@ -7,19 +7,31 @@
     else{
         if(isset($_POST['login']))
         {
-            echo "Login";
+            echo "Login <BR>";
             $host="127.0.0.1";
+            $login="root";
+
             $user=$_POST["username"];
             $password=$_POST["password"];
             /* connessione */
-            $connection=mysqli_connect($host
-            6,$user,$password);
-            or die("errore di connessione");
+            $connection=mysqli_connect($host,$login,'')
+            or die(alert('errore di connessione'));
             /* selezione db */
-            mysqli_select_db($connection,"chat") or die("errore nella selezione del db");
+            mysqli_select_db($connection,'chat') or die(alert('errore nella selezione del db'));
+
+            /* controllo dati */
+            $query="SELECT U.username, U.password
+                    FROM Users AS U
+                    WHERE U.username=$user AND U.password=$password";
+            mysqli_query($connection, $query) or die(alert('errore'));
+
             mysqli_close($connection);
         }
         if(isset($_POST['sign_up']))
             header('Location: /chattazza/chat/html/signup.html');
+    }
+
+    function alert($message){
+        echo "<script type='text/javascript'> alert('$message');</script>";
     }
 ?>
