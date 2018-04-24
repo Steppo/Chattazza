@@ -13,9 +13,14 @@
 
             $user=$_POST['username'];
             $password=$_POST['password'];
+            $conf_pass=$_POST['confirm_password'];
             $name=$_POST['name'];
             $surname=$_POST['surname'];
             $email=$_POST['email'];
+
+            if($password!=$conf_pass)
+                die(alert('password sbagliata'));
+
             /* connessione */
             $connection=mysqli_connect($host,$login,'')
             or die(alert('errore di connessione'));

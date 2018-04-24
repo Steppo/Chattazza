@@ -13,6 +13,7 @@
 
             $user=$_POST["username"];
             $password=$_POST["password"];
+            
             /* connessione */
             $connection=mysqli_connect($host,$login,'')
             or die(alert('errore di connessione'));
