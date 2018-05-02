@@ -44,9 +44,9 @@ CREATE TABLE `messages` (
 CREATE TABLE `users` (
   `IdUsePk` int(11) NOT NULL,
   `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `password` varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `psw` varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `email` varchar(40) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `name` varchar(40) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `nome` varchar(40) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `surname` varchar(40) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

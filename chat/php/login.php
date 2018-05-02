@@ -21,9 +21,9 @@
             mysqli_select_db($connection,'chat') or die(alert('errore nella selezione del db'));
 
             /* controllo dati */
-            $query="SELECT U.username, U.password
-                    FROM Users AS U
-                    WHERE U.username=$user AND U.password=$password";
+            $query="SELECT U.username, U.psw
+                    FROM users AS U
+                    WHERE U.username='$user' AND U.psw='$password'";
             mysqli_query($connection, $query) or die(alert('errore'));
 
             mysqli_close($connection);

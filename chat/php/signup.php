@@ -29,8 +29,9 @@
             mysqli_select_db($connection,'chat') or die(alert('errore nella selezione del db'));
 
             /* inserimento dati nel DB */
-            $query="INSERT INTO 'users' (IdUsePk, username, password, email, name, surname)
-                    VALUES (, '$surname', '$password', '$email', '$name', '$surname')";
+            $table="users";
+            $query="INSERT INTO $table (username, psw, email, nome, surname)
+                    VALUES ('$user', '$password', '$email', '$name', '$surname')";
             mysqli_query($connection, $query) or die(alert('errore inserimento dati'));
 
             mysqli_close($connection);
