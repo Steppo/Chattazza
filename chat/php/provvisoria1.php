@@ -111,7 +111,7 @@ $message=$_POST['text'];
 mysql_query("INSERT INTO users VALUES ('$name', '$message');");
 }*/
 echo "Benvenuto nella Chat";
-//$query_select=mysql_query("SELECT * FROM Chat");
+$query_select=mysql_query("SELECT * FROM massages");
 while($rows=mysql_fetch_array($query_select))
 {
     echo "<p align='left'>{$rows['names']}:</p><p></p>";
