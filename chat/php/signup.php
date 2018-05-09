@@ -7,7 +7,6 @@
     else{
         if(isset($_POST['sign_up']))
         {
-            echo "Sign up <BR>";
             $host="127.0.0.1";
             $login="root";
 
@@ -35,6 +34,7 @@
             mysqli_query($connection, $query) or die(alert('errore inserimento dati'));
 
             mysqli_close($connection);
+            header('Location: /chattazza/chat/');
         }
     }
 
