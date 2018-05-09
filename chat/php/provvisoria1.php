@@ -85,16 +85,33 @@ overflow:auto;
 <center>
 <p><font size="10px;">Chat</font></p>
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+<!-- qua c'era il pezzo-->
+<table>
+<tr>
+<td>Nome</td>
+<td><input type="text" name="name" value="<?php echo $name; ?>"></td>
+</tr>
+<tr>
+<td>Testo</td>
+<td><textarea name="text"></textarea></td>
+</tr>
+<table>
+<tr>
+<td><input type="submit" value="Invia"></td>
+<td><input type="reset" value="Resetta"></td>
+</tr>
+</table>
+<!--questo è il pezzo-->
 <div id="chat" class="chat">
 <?php
 $name=$_POST['name'];
 $message=$_POST['text'];
-if ($name AND $message)
+/*if ($name AND $message)
 {
-mysql_query("INSERT INTO Chat VALUES ('$name', '$message');");
-}
+mysql_query("INSERT INTO users VALUES ('$name', '$message');");
+}*/
 echo "Benvenuto nella Chat";
-$query_select=mysql_query("SELECT * FROM Chat");
+//$query_select=mysql_query("SELECT * FROM Chat");
 while($rows=mysql_fetch_array($query_select))
 {
     echo "<p align='left'>{$rows['names']}:</p><p></p>";
@@ -116,21 +133,7 @@ echo "<p align='left'>$messages</p>";
 }
 ?>
 </div>
-<table>
-<tr>
-<td>Nome:</td>
-<td><input type="text" name="name" value="<?php echo $name; ?>"></td>
-</tr>
-<tr>
-<td>Testo:</td>
-<td><textarea name="text"></textarea></td>
-</tr>
-<table>
-<tr>
-<td><input type="submit" value="Invia"></td>
-<td><input type="reset" value="Resetta"></td>
-</tr>
-</table>
+<!--finisce qua-->
 </form>
 </center>
 </body>
